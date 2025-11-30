@@ -1,0 +1,136 @@
+/* ============================= */
+/*        CONFIG.CSS             */
+/*     Reusable Global Styles    */
+/* ============================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  background-color: rgba(221, 220, 220, 0.568);
+}
+.container-hero {
+  height: 100vh;
+}
+.section-2 {
+  height: 100vh;
+}
+.section3-container {
+  position: relative;
+  height: 100vh;
+}
+
+/* Reusable Heading Styles */
+.heading-primary {
+  font-size: 42px;
+  font-family: sans-serif;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111111;
+}
+
+.heading-secondary {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 25px;
+}
+
+/* Reusable Text Styles */
+.text-body {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.8;
+  color: #6c6c6c;
+  margin-bottom: 40px;
+}
+
+.text-body2{
+  font-size: 20px;
+  font-weight: 300;
+  color: #111;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+
+.text-caption {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: #6c6c6c;
+}
+
+.text-caption a {
+  color: #6c6c6c;
+  text-decoration: underline;
+}
+
+/* Reusable Button Styles */
+.btn {
+  padding: 20px 40px;
+  color: #ffffff;
+  background: #c9b663;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #000000;
+}
+
+/* Reusable Yellow Box Styles */
+.yellow-box {
+  position: absolute;
+  background: #c9b663;
+  z-index: 0;
+}
+
+/* Reusable Image Styles */
+.img-main {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Reusable Card Styles */
+.card {
+  background: #ffffff;
+  padding: 50px 45px;
+  z-index: 3;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Animation Keyframes */
+@keyframes slideFromLeft {
+  0% { transform: translateX(-60px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideFromRight {
+  0% { transform: translateX(60px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideFromTop {
+  0% { transform: translateY(-60px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideFromBottom {
+  0% { transform: translateY(60px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
