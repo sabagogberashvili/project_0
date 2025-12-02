@@ -15,14 +15,10 @@ body {
   overflow-x: hidden;
   background-color: rgba(221, 220, 220, 0.568);
 }
-.container-hero {
-  height: 100vh;
-}
-.section-2 {
-  height: 100vh;
-}
-.section3-container {
-  position: relative;
+
+.container-hero,
+.section-2,
+.section3{
   height: 100vh;
 }
 
@@ -52,7 +48,7 @@ body {
   margin-bottom: 40px;
 }
 
-.text-body2{
+.text-body2 {
   font-size: 20px;
   font-weight: 300;
   color: #111;
@@ -83,7 +79,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   align-self: flex-start;
-  transition: background-color 0.3s ease;
+  transition: 0.25s ease;
 }
 
 .btn:hover {
@@ -116,21 +112,37 @@ body {
 
 /* Animation Keyframes */
 @keyframes slideFromLeft {
-  0% { transform: translateX(-60px); opacity: 0; }
+  0% { transform: translateX(-80px); opacity: 0; }
   100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideFromRight {
-  0% { transform: translateX(60px); opacity: 0; }
+  0% { transform: translateX(80px); opacity: 0; }
   100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideFromTop {
-  0% { transform: translateY(-60px); opacity: 0; }
+  0% { transform: translateY(-80px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes slideFromBottom {
-  0% { transform: translateY(60px); opacity: 0; }
+  0% { transform: translateY(80px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes spawn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideFromTopCenter {
+  0% { 
+    transform: translate(-50%, calc(-50% - 80px)); 
+    opacity: 0; 
+  }
+  100% { 
+    transform: translate(-50%, -50%); 
+    opacity: 1; 
+  }
 }

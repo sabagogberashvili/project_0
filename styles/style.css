@@ -3,6 +3,7 @@
 /*     Component Specific Styles */
 /* ============================= */
 
+/* Header */
 .header {
   height: 80px;
   background-color: #ffffff;
@@ -82,7 +83,6 @@
   padding: 0 20px;
   opacity: 0;
   animation: slideFromLeft 0.8s ease-out 0.2s forwards;
-
 }
 
 .content-box .text-body2 {
@@ -112,9 +112,9 @@
   animation: slideFromTop 0.8s ease-out 0.6s forwards;
 }
 
-/* ============================= /
-/        SECTION 3              /
-/ ============================= / */
+/* ============================= */
+/*        SECTION 3              */
+/* ============================= */
 
 .section3-container {
   position: relative;
@@ -123,30 +123,57 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+/* Yellow Box Centered */
+.yellow-box4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 700px;
+  background-color: #c4b45e;
+  z-index: 0;
+  opacity: 0;
+  animation: slideFromTopCenter 1s ease-out 0.4s forwards;
+  pointer-events: none;
+}
+
+.text3 {
+  text-align: center;
+  margin-top: 90px;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  font-size: 18px;
+  color: #6c6c6c;
+  opacity: 0;
+  animation: slideFromBottom 1.2s ease-out 0.6s forwards;
 }
 
 .section-3 {
   max-width: 1200px;
-  margin: 150px auto 0;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   background: #fff;
   position: relative;
   z-index: 2;
-  order: 1;
 }
+
 .section3-img {
   padding: 30px;
 }
-.section3-list {
-  padding: 30px;
-  display: flex;
-}
+
 .section3-img-wrapper img {
   width: 510px;
   height: auto;
   background-color: #ffffff;
+  opacity: 0;
+  animation: slideFromLeft 1s ease-out 0.2s forwards;
 }
 
 .section3-list {
@@ -160,151 +187,196 @@
 .section3-item {
   display: flex;
   height: 154px;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
-  padding: 28px 28px;
+  padding: 28px;
   border: 1px solid #dcdcdc;
   background: #ffffff;
+  opacity: 0;
+  animation: slideFromRight 1.1s ease-out 0.2s forwards;
 }
 
 .section3-icon {
   width: 48px;
   height: 48px;
   opacity: 0.8;
+  flex-shrink: 0;
 }
 
 .section3-text h3 {
-  font-size: 20px;
-  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.8;
+  color: #000000;
   margin-bottom: 8px;
-  color: #111;
 }
 
 .section3-text p {
-  color: #111111;
-  line-height: 1.6;
   max-width: 380px;
-  font-family: "Arial", sans-serif;
-}
-
-.yellow-box4 {
-  background-color: #c4b45e;
-  height: 700px;
-  width: 300px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 45%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.text3 {
-  text-align: center;
-  margin: 63px 60px 60px 60px;
-  position: relative;
-  z-index: 3;
-  display: block;
-  width: 100%;
-  order: 2;
   font-size: 18px;
-  color: #111111;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.8;
+  color: #6c6c6c;
 }
-
-
 /* ============================= */
 /*        SECTION 4              */
 /* ============================= */
 
-/* SECTION BACKGROUND */
 .section4 {
   position: relative;
   width: 100%;
   padding: 160px 0;
-  background: #c9b75a; /* matches original */
+  background: #c9b75a;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* IMAGE LEFT SIDE */
+/* IMAGE — animates FIRST */
 .img-juice {
   position: relative;
   z-index: 3;
-  margin-right: -230px;      /* card overlaps image more */
+  margin-right: -230px;
+  opacity: 0;
+  animation: slideFromLeft 1s ease-out 0.2s forwards;
 }
 
 .img-juice img {
-  width: 453px;
-  height: 653px;
+  width: 583px;
+  height: 659px;
 }
 
-/* CARD */
+/* CARD — animates SECOND */
 .cocktail-container {
   width: 462px;
   height: 549px;
-  background: #ffffff;
+  background: #fff;
   border-radius: 6px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
   z-index: 4;
-  margin-left: 20px;
+  margin-left: 150px;
+  padding: 30px 40px;
+  opacity: 0;
+  animation: slideFromBottom 1s ease-out 0.45s forwards;
 }
 
-/* TITLE */
 .cocktails {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 700;
   margin-bottom: 25px;
   color: #1a1a1a;
 }
 
-/* DESCRIPTION */
 .cocktail-desc {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.65;
   margin-bottom: 25px;
   color: #555;
 }
 
-
-/* BUTTON */
-.btn {
-  background: #c9b75a;
-  color: #fff;
-  border: none;
-  padding: 14px 35px;
-  border-radius: 6px;
-  letter-spacing: 1px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.25s ease;
+/* WHITE BOX — animates THIRD */
+.whitebox {
+  position: absolute;
+  top: 550px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 742px;
+  height: 334px;
+  background: #e8e8e8;
+  z-index: 1;
+  opacity: 0;
+  animation: slideFromBottom 1s ease-out 0.7s forwards;
 }
 
-.btn:hover {
-  background: #b5a44f;
-}
-
-/* TOP CIRCLE */
+/* CIRCLE — animates LAST */
 .sircle {
   position: absolute;
   top: 110px;
-  right: 430px;
+  right: 330px;
   width: 215px;
   height: 215px;
   background: #f0f0f0;
   border-radius: 50%;
   z-index: 1;
+  transform: scale(0);
+  opacity: 0;
+  animation: spawn 0.8s ease-out 0.95s forwards;
 }
 
-/* WHITE BACKGROUND BOX */
-.whitebox {
-  position: absolute;
-  top: 430px;            /* aligns just under card & image */
-  left: 56%;
-  width: 620px;
-  height: 330px;
-  background: #e8e8e8;
-  border-radius: 8px;
-  z-index: 1;
+/* ============================= */
+/*            SECTION 6          */
+/* ============================= */
+
+.section6 {
+  width: 100%;
+  padding: 120px 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
 }
+
+.section6-container {
+  width: 1200px;
+  text-align: center;
+}
+
+/* Title */
+.healthy-weight {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Small text */
+.weight {
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto 60px auto;
+  color: #5a5a5a;
+  line-height: 1.7;
+}
+
+/* Make flex container for 3 boxes WITHOUT changing your HTML */
+.o1, .o2, .o3 {
+  width: 350px;
+  padding: 40px 35px;
+  background: #e7e7e7;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px;
+  text-align: center;
+}
+
+/* Middle box = yellow */
+.o2 {
+  background: #c9b663;
+}
+
+/* Headings inside boxes */
+.o1-heading,
+
+.o3-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Descriptions inside boxes */
+.o1-desc,
+.o3-desc {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+}
+/* o2-desc */
+.o2-desc {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+.o2-heading{
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+/* ========================== */
+/*        SECTION 7     */
+/* ========================== */
